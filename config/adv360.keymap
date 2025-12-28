@@ -21,6 +21,85 @@
         };
     };
 
+    macros {
+        desktop_one: desktop_one {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_GUI &kp Y>;
+            label = "DESKTOP_ONE";
+        };
+
+        desktop_two: desktop_two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_GUI &kp U>;
+            label = "DESKTOP_TWO";
+        };
+
+        desktop_three: desktop_three {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_GUI &kp I>;
+            label = "DESKTOP_THREE";
+        };
+
+        desktop_four: desktop_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_GUI &kp O>;
+            label = "DESKTOP_4";
+        };
+
+        desktop_five: desktop_five {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_GUI &kp P>;
+            label = "DESKTOP_FIVE";
+        };
+
+        desktop_six: deskcopt_six {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_GUI &kp LEFT_BRACKET>;
+            label = "DESKCOPT_SIX";
+        };
+
+        full_screen: full_screen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_GUI &kp LEFT_ALT &kp Y>;
+            label = "FULL_SCREEN";
+        };
+
+        left_half: left_half {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_GUI &kp LEFT_ALT &kp U>;
+            label = "LEFT_HALF";
+        };
+
+        right_half: right_half {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_GUI &kp LEFT_ALT &kp I>;
+            label = "RIGHT_HALF";
+        };
+
+        two_thirds: two_thirds {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_GUI &kp LEFT_ALT &kp P>;
+            label = "TWO_THIRDS";
+        };
+
+        one_third: one_third {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_GUI &kp LEFT_ALT &kp O>;
+            label = "ONE_THIRD";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -70,11 +149,11 @@
 
         Secondary {
             bindings = <
-&trans   &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &trans
-&trans   &trans  &trans  &kp W   &trans  &trans  &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &trans
-&kp ESC  &trans  &kp A   &kp S   &kp D   &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans   &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans    &trans    &trans  &trans     &trans  &trans
-&trans   &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans            &trans    &trans  &trans     &trans  &trans
+&trans   &trans        &trans        &trans          &trans         &trans         &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &trans
+&trans   &full_screen  &left_half    &right_half     &one_third     &two_thirds    &trans                                      &trans  &trans    &trans    &trans  &trans     &trans  &trans
+&kp ESC  &desktop_one  &desktop_two  &desktop_three  &desktop_four  &desktop_five  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans   &trans        &trans        &trans          &trans         &trans                         &trans      &trans                  &trans    &trans    &trans  &trans     &trans  &trans
+&trans   &trans        &trans        &trans          &trans                        &trans  &trans  &trans      &trans  &trans  &trans            &trans    &trans  &trans     &trans  &trans
             >;
         };
     };
